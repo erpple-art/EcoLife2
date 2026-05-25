@@ -334,7 +334,7 @@
     <section id="startScreen" class="hero">
       <h1>EcoLife Simulator</h1>
       <p>
-        Live through a normal week and make everyday choices about food, shopping, transportation, energy, water, and waste. Your goal is not to be perfect. Your goal is to see how small choices add up.
+        Live through a normal week and make choices about food, shopping, transportation, energy, water, and waste. Your goal isn't to be perfect!
       </p>
       <button onclick="startGame()">Start the Week</button>
       <div class="score-note">
@@ -361,7 +361,7 @@
     </section>
 
     <section id="resultsScreen" class="results-card hidden">
-      <h2>Your Week Is Complete</h2>
+      <h2>Your Week Is Complete!</h2>
       <p id="resultMessage"></p>
       <div class="impact-list">
         <div class="impact-item"><strong id="finalEco">0</strong><span>Eco Score</span></div>
@@ -374,7 +374,7 @@
     </section>
 
     <article id="article" class="article-card hidden">
-      <h2>Small Choices, Real Impact</h2>
+      <h2>The EcoLife Message</h2>
       <div id="articleIntro"></div>
 
       <h3>What can you do?</h3>
@@ -448,8 +448,8 @@
       {
         scenario: "You’re rushing to school/work and need a drink. What do you grab?",
         choices: [
-          { title: "Plastic water bottle", desc: "Fast and easy, and the label says it’s recyclable!", energy: 3, eco: -8, waste: -3, carbon: -1, feedback: "Convenient, but it still creates single-use waste. Recycling helps, but avoiding the bottle entirely is better." },
-          { title: "Fill a reusable water bottle", desc: "Takes an extra minute, but avoids the waste entirely.", energy: -2, eco: 5, waste: 1, carbon: 0, feedback: "Nice. A reusable bottle is one of the easiest repeatable swaps." }
+          { title: "Plastic water bottle", desc: "Fast and easy, and the label says it’s recyclable!", energy: 3, eco: -8, waste: -3, carbon: -1, feedback: "Convenient, but it still creates single-use waste. Recycling helps, but it's best to just avoid the bottle." },
+          { title: "Fill a reusable water bottle", desc: "Takes an extra minute, but avoids the waste entirely.", energy: -2, eco: 5, waste: 1, carbon: 0, feedback: "A reusable bottle is one of the easiest repeatable swaps!"  }
         ]
       },
       {
@@ -463,16 +463,16 @@
       {
         scenario: "You’re leaving the house and realize the lights are still on. What do you do?",
         choices: [
-          { title: "Turn them off before leaving", desc: "Future you appreciates the electricity bill too.", energy: -1, eco: 4, waste: 0, carbon: 1, feedback: "Easy win. Saving electricity can be as simple as noticing what is still on." },
-          { title: "Leave them on", desc: "Don’t wanna summon any demons…", energy: 2, eco: -5, waste: 0, carbon: -2, feedback: "The demons may stay away, but the electricity use stays too." }
+          { title: "Turn them off before leaving", desc: "Future you appreciates the electricity bill.", energy: -1, eco: 4, waste: 0, carbon: 1, feedback: "Saving electricity can be as simple as noticing what is still on." },
+          { title: "Leave them on", desc: "Don’t wanna summon any demons…", energy: 2, eco: -5, waste: 0, carbon: -2, feedback: "It's okay, demons aren't real." },
         ]
       },
       {
         scenario: "You forgot lunch. What’s the move?",
         choices: [
-          { title: "Pack leftovers into a reusable container", desc: "Who doesn’t like cold pizza?", energy: -4, eco: 7, waste: 2, carbon: 1, feedback: "Great save. Leftovers reduce food waste and reusable containers avoid extra packaging." },
+          { title: "Pack leftovers into a reusable container", desc: "Who doesn’t like cold pizza?", energy: -4, eco: 7, waste: 2, carbon: 1, feedback: "Leftovers reduce food waste and reusable containers avoid extra packaging." },
           { title: "Buy cafeteria/fast food with disposable packaging", desc: "Doesn’t everyone else do it?", energy: 4, eco: -7, waste: -3, carbon: -1, feedback: "Convenient, but disposable packaging can make one meal much wasteier." },
-          { title: "I don’t eat lunch", desc: "hm…", energy: -12, eco: 0, waste: 0, carbon: 0, feedback: "Technically low-impact, but not a realistic sustainability strategy. You still need energy to get through the day." }
+          { title: "I don’t eat lunch", desc: "hm…", energy: -12, eco: 0, waste: 0, carbon: 0, feedback: "Technically low-impact, but skipping meals isn't sustainable or healthy. Make sure to eat something later!" }
         ]
       }
     ];
@@ -481,9 +481,9 @@
       {
         scenario: "You’re hungry after a long day. What’s for dinner?",
         choices: [
-          { title: "Cook a simple meal at home", desc: "Hope you bought groceries this week.", energy: -6, eco: 6, waste: 1, carbon: 1, feedback: "Cooking at home can reduce packaging and gives you more control over waste." },
-          { title: "Heat up leftovers", desc: "Probably still edible.", energy: 1, eco: 8, waste: 2, carbon: 1, feedback: "Excellent. Leftovers are convenient and prevent food waste." },
-          { title: "Order takeout with plastic utensils and extra packaging", desc: "Come on…", energy: 7, eco: -10, waste: -4, carbon: -3, feedback: "Takeout is easy, but extra utensils and packaging make the impact much higher." }
+          { title: "Cook a simple meal at home", desc: "Hope you bought groceries this week.", energy: -6, eco: 6, waste: 1, carbon: 1, feedback: "Cooking at home can reduce packaging and give you more control over waste." },
+          { title: "Heat up leftovers", desc: "Probably still edible.", energy: 1, eco: 8, waste: 2, carbon: 1, feedback: "Leftovers are convenient and prevent food waste." },
+          { title: "Order takeout with plastic utensils and extra packaging", desc: "Come on…", energy: 7, eco: -10, waste: -4, carbon: -3, feedback: "Takeout is convenient, but the extra utensils and packaging make the impact much higher." }
         ]
       },
       {
@@ -491,22 +491,22 @@
         choices: [
           { title: "Recycle what you can and toss the rest", desc: "A little sorting goes a long way.", energy: -2, eco: 5, waste: 2, carbon: 0, feedback: "Wow, you’ve done your research! Sorting correctly helps recycling actually work." },
           { title: "Toss everything into the garbage", desc: "Too tired to read the label?", energy: 2, eco: -5, waste: -3, carbon: 0, feedback: "Too tired to read the label? Guess we’ve all been there before." },
-          { title: "Toss everything into recycling", desc: "Everything is recyclable if you believe hard enough, right?", energy: 1, eco: -6, waste: -4, carbon: 0, feedback: "You might as well just label it “Landfill…” Contaminated recycling can ruin a whole batch." }
+          { title: "Toss everything into recycling", desc: "But...why?", energy: 1, eco: -6, waste: -4, carbon: 0, feedback: "You might as well just label it “Landfill…” Contaminated recycling can ruin a whole batch." }
         ]
       },
       {
         scenario: "You’re too warm in your room. What do you do?",
         choices: [
-          { title: "Open a window or use a fan", desc: "Gotta lower the electrical bill.", energy: -2, eco: 5, waste: 0, carbon: 2, feedback: "Good first step. Fans and airflow usually use less electricity than blasting AC." },
-          { title: "Turn the AC way down", desc: "It’s faster.", energy: 5, eco: -6, waste: 0, carbon: -3, feedback: "Fast, yes. Efficient, not so much. Cooling can use a lot of energy." }
+          { title: "Open a window or use a fan", desc: "Gotta lower the electrical bill.", energy: -2, eco: 5, waste: 0, carbon: 2, feedback: "Fans and airflow use less electricity than blasting AC." },
+          { title: "Turn the AC way down", desc: "It’s faster.", energy: 5, eco: -6, waste: 0, carbon: -3, feedback: "Fast, yes. Efficient, not really. Cooling can use a lot of energy." }
         ]
       },
       {
         scenario: "You’re doing some online shopping! What looks good?",
         choices: [
           { title: "Thrifted/secondhand clothes", desc: "Great deals!", energy: -3, eco: 7, waste: 1, carbon: 1, feedback: "Secondhand shopping keeps clothes in use longer and reduces demand for new production." },
-          { title: "A trendy fast-fashion haul", desc: "The category is labeled “eco collection.”", energy: 5, eco: -10, waste: -2, carbon: -3, feedback: "Green labels do not always mean low impact. This is why greenwashing matters." },
-          { title: "A big-name brand", desc: "Gotta treat yourself sometimes.", energy: 3, eco: -4, waste: -1, carbon: -1, feedback: "Not the worst choice, but buying new still has packaging, shipping, and production impact." }
+          { title: "A trendy fast-fashion haul", desc: "The category is labeled “eco collection.”", energy: 5, eco: -10, waste: -2, carbon: -3, feedback: "Green labels don't always mean low impact. See the greenwashing note at the end!" },
+          { title: "A big-name brand", desc: "Gotta treat yourself sometimes.", energy: 3, eco: -4, waste: -1, carbon: -1, feedback: "Not the worst, but buying new still has packaging, shipping, and production impact." }
         ]
       }
     ];
@@ -515,14 +515,14 @@
       {
         scenario: "It’s laundry day!",
         choices: [
-          { title: "Wash a full load with cold water", desc: "Efficient and very normal.", energy: -3, eco: 6, waste: 0, carbon: 2, feedback: "Great. Cold water and full loads save energy without making life harder." },
-          { title: "Wash a tiny load in hot water", desc: "One sock absolutely could not wait.", energy: 3, eco: -7, waste: 0, carbon: -3, feedback: "Hot water and tiny loads use more energy for less clothing. The sock could probably wait." }
+          { title: "Wash a full load with cold water", desc: "Efficient and very normal.", energy: -3, eco: 6, waste: 0, carbon: 2, feedback: "Cold water and full loads save energy." },
+          { title: "Wash a tiny load in hot water", desc: "Your socks can't wait.", energy: 3, eco: -7, waste: 0, carbon: -3, feedback: "Hot water and tiny loads use more energy for less clothing. Your socks probably could've waited." }
         ]
       },
       {
         scenario: "Weekend breakfast plans?",
         choices: [
-          { title: "Make breakfast at home", desc: "Cheaper, quieter, and probably less packaging.", energy: -4, eco: 5, waste: 1, carbon: 1, feedback: "Nice. Homemade meals often reduce packaging and unnecessary trips." },
+          { title: "Make breakfast at home", desc: "Cheaper and more therapeutic!", energy: -4, eco: 5, waste: 1, carbon: 1, feedback: "Homemade meals often reduce packaging and unnecessary trips." },
           { title: "Go through the fast food drive-thru", desc: "Mmm… hash browns…", energy: 5, eco: -6, waste: -2, carbon: -2, feedback: "Delicious, but the drive-thru usually brings packaging and car emissions with it." }
         ]
       },
@@ -530,61 +530,61 @@
         scenario: "You need groceries for the week. Where are you shopping?",
         choices: [
           { title: "Local farmers market", desc: "Tons of BOGO deals, probably.", energy: -5, eco: 7, waste: 1, carbon: 1, feedback: "Local markets can reduce packaging and make fresh food easier to plan around." },
-          { title: "Regular grocery store with reusable bags", desc: "Practical and still pretty responsible.", energy: -2, eco: 5, waste: 2, carbon: 0, feedback: "Good realistic option. Reusable bags and planned groceries reduce waste." },
-          { title: "Buy individually packaged snacks", desc: "Well, it’s convenient.", energy: 5, eco: -8, waste: -4, carbon: -1, feedback: "Convenient snacks are easy, but individual packaging creates a lot of avoidable trash." }
+          { title: "Regular grocery store with reusable bags", desc: "Practical and still pretty responsible.", energy: -2, eco: 5, waste: 2, carbon: 0, feedback: "Reusable bags and planned groceries reduce waste." },
+          { title: "Buy individually packaged snacks", desc: "Well, it’s convenient.", energy: 5, eco: -8, waste: -4, carbon: -1, feedback: "Convenient snacks are nice, but individual packaging creates a lot of avoidable trash." }
         ]
       },
       {
         scenario: "Your room/apartment is messy. What do you do?",
         choices: [
-          { title: "Use reusable rags and refillable cleaners", desc: "Well, what else are they for?", energy: -2, eco: 6, waste: 2, carbon: 0, feedback: "Reusable cleaning supplies are a simple way to cut down on single-use trash." },
-          { title: "Use disposable wipes", desc: "They were right there.", energy: 3, eco: -5, waste: -3, carbon: 0, feedback: "Disposable wipes are convenient, but they turn one cleaning session into more trash." }
+          { title: "Use reusable rags and refillable cleaners", desc: "Well, what else are they for?", energy: -2, eco: 6, waste: 2, carbon: 0, feedback: "Reusable cleaning supplies are a great way to cut down on single-use trash." },
+          { title: "Use disposable wipes", desc: "They were right there.", energy: 3, eco: -5, waste: -3, carbon: 0, feedback: "Disposable wipes are convenient, but they turn each cleaning session into more trash." }
         ]
       },
       {
         scenario: "Your friend wants to do something outdoorsy. What do you do?",
         choices: [
-          { title: "Go hiking/walking/biking together", desc: "Free activity, free cardio.", energy: -8, eco: 7, waste: 0, carbon: 2, feedback: "Low-impact and fun. Outdoor plans do not have to require buying stuff or driving far." },
-          { title: "Drive somewhere far", desc: "Adventure requires gasoline, apparently.", energy: 3, eco: -7, waste: 0, carbon: -4, feedback: "Sometimes worth it, but long drives add a lot of carbon impact." }
+          { title: "Go hiking/walking/biking together", desc: "Free activity, free cardio.", energy: -8, eco: 7, waste: 0, carbon: 2, feedback: "Low-impact and fun! Outdoor plans do not have to require buying stuff or driving far." },
+          { title: "Drive somewhere far", desc: "Adventure requires gasoline, apparently.", energy: 3, eco: -7, waste: 0, carbon: -4, feedback: "Sometimes you gotta do what you wanna do, but long drives add a lot of carbon impact." }
         ]
       }
     ];
 
     const weekendEvening = [
       {
-        scenario: "Movie night with friends. What are you using?",
+        scenario: "You're having a movie night with friends! What are you using?",
         choices: [
-          { title: "Reusable cups/plates/snacks from home", desc: "A little less trash after the credits roll.", energy: -3, eco: 7, waste: 3, carbon: 0, feedback: "Great hosting choice. Reusables cut down on party trash quickly." },
-          { title: "Disposable plates, cups, wrappers, containers", desc: "The full landfill combo.", energy: 4, eco: -8, waste: -4, carbon: -1, feedback: "Fun night, rough trash bag. Social events can create a lot of avoidable waste." }
+          { title: "Reusable cups/plates/snacks from home", desc: "A little less trash after the credits roll.", energy: -3, eco: 7, waste: 3, carbon: 0, feedback: "You're a good host! Reusables cut down on party trash quickly." },
+          { title: "Disposable plates, cups, wrappers, containers", desc: "The full landfill combo.", energy: 4, eco: -8, waste: -4, carbon: -1, feedback: "Fun night, not so much for your trash bag. Social events can create a lot of avoidable waste." }
         ]
       },
       {
         scenario: "There’s extra food after dinner. What do you do?",
         choices: [
-          { title: "Save the leftovers for later", desc: "Tomorrow-you is grateful.", energy: -1, eco: 7, waste: 3, carbon: 1, feedback: "Smart. Saving leftovers reduces food waste and gives you an easy meal later." },
-          { title: "Throw everything away", desc: "The fridge is too crowded.", energy: 2, eco: -8, waste: -4, carbon: -1, feedback: "Food waste is still waste. A crowded fridge is annoying, but leftovers can be useful." }
+          { title: "Save the leftovers for later", desc: "Future you is grateful.", energy: -1, eco: 7, waste: 3, carbon: 1, feedback: "Saving leftovers reduces food waste and gives you an easy meal later." },
+          { title: "Throw everything away", desc: "The fridge is too crowded.", energy: 2, eco: -8, waste: -4, carbon: -1, feedback: "Food waste is still waste." }
         ]
       },
       {
-        scenario: "You’re going out tonight. Transportation plan?",
+        scenario: "You’re going out tonight. How are you getting around?",
         choices: [
-          { title: "Walk/bike/public transit", desc: "Low impact, more planning.", energy: -5, eco: 8, waste: 0, carbon: 3, feedback: "Great choice. Shared or active transportation lowers emissions." },
-          { title: "Carpool with friends", desc: "Coordination, but worth it.", energy: -2, eco: 5, waste: 0, carbon: 2, feedback: "Carpooling is a practical compromise when driving is hard to avoid." },
-          { title: "Everyone drives separately", desc: "Coordination is hard!", energy: 4, eco: -8, waste: 0, carbon: -4, feedback: "Separate cars multiply the same trip’s emissions. Coordination can make a big difference." }
+          { title: "Walk/bike/public transit", desc: "More planning.", energy: -5, eco: 8, waste: 0, carbon: 3, feedback: "Great choice! Shared or active transportation lowers emissions." },
+          { title: "Carpool with friends", desc: "Takes some coordination.", energy: -2, eco: 5, waste: 0, carbon: 2, feedback: "Carpooling is a good compromise when driving is hard to avoid." },
+          { title: "Everyone drives separately", desc: "Coordination is hard!", energy: 4, eco: -8, waste: 0, carbon: -4, feedback: "Coordination can make a big difference." }
         ]
       },
       {
         scenario: "You finish using your phone/laptop before bed. What now?",
         choices: [
-          { title: "Shut everything down and unplug chargers", desc: "Tiny habit, tiny savings, still helpful.", energy: -2, eco: 4, waste: 0, carbon: 1, feedback: "Small, repeatable energy habits can add up over time." },
-          { title: "Leave chargers plugged in everywhere", desc: "Well it has to be at 100% before you use it!!", energy: 2, eco: -4, waste: 0, carbon: -1, feedback: "Phantom energy use is small, but easy to avoid when it becomes a habit." }
+          { title: "Shut everything down and unplug chargers", desc: "You're not using it away.", energy: -2, eco: 4, waste: 0, carbon: 1, feedback: "Energy habits add up over time." },
+          { title: "Leave chargers plugged in everywhere", desc: "Well, it has to be at 100% before you use it!!", energy: 2, eco: -4, waste: 0, carbon: -1, feedback: "Phantom energy use is small, but easy to avoid when it becomes a habit." }
         ]
       },
       {
-        scenario: "Your friend suggests ordering random stuff online because shipping is “free.” What do you do?",
+        scenario: "Your friend suggests ordering random stuff online because shipping is free. What do you do?",
         choices: [
-          { title: "Only buy what you actually need", desc: "Revolutionary behavior, honestly.", energy: -1, eco: 7, waste: 1, carbon: 2, feedback: "Excellent. The most sustainable purchase is often the unnecessary one you skip." },
-          { title: "Add unnecessary items to your cart", desc: "Consumerism speedrun.", energy: 4, eco: -8, waste: -2, carbon: -3, feedback: "Free shipping is not impact-free. Extra purchases mean extra production, packaging, and delivery." }
+          { title: "Only buy what you actually need", desc: "So responsible!", energy: -1, eco: 7, waste: 1, carbon: 2, feedback: "The most sustainable purchase is often the one you skip." },
+          { title: "Add unnecessary items to your cart", desc: "Consumerism, woot woot.", energy: 4, eco: -8, waste: -2, carbon: -3, feedback: "Free shipping isn't impact-free. Extra purchases mean extra production, packaging, and delivery." }
         ]
       }
     ];
@@ -594,34 +594,34 @@
         label: "Random Event",
         scenario: "Your reusable water bottle breaks. What now?",
         choices: [
-          { title: "Buy another reusable bottle", desc: "Replace the tool you actually use.", energy: -2, eco: 5, waste: 1, carbon: 0, feedback: "Good recovery. Replacing a useful reusable item makes sense when you actually need it." },
-          { title: "Switch back to disposable plastic bottles", desc: "Just for now, of course.", energy: 3, eco: -7, waste: -3, carbon: -1, feedback: "The temporary option can become a habit fast. Reusables work best when they stay convenient." }
+          { title: "Buy another reusable bottle", desc: "I mean, yeah.", energy: -2, eco: 5, waste: 1, carbon: 0, feedback: "Replacing a useful reusable item makes sense if you actually need it." },
+          { title: "Switch back to disposable plastic bottles", desc: "Just for now, of course.", energy: 3, eco: -7, waste: -3, carbon: -1, feedback: "The temporary option can become a habit fast." }
         ]
       },
       {
         label: "Random Event",
         scenario: "It’s raining pretty heavily. How are you getting around?",
         choices: [
-          { title: "Public transit/carpool", desc: "Dry enough, lower impact.", energy: -2, eco: 5, waste: 0, carbon: 2, feedback: "Practical compromise. Bad weather does not always require driving alone." },
-          { title: "Drive alone", desc: "Dry, fast, and emissions-heavy.", energy: 5, eco: -6, waste: 0, carbon: -3, feedback: "Understandable, but solo driving is usually a higher-emissions choice." },
-          { title: "Walk anyway", desc: "Soggy but committed.", energy: -8, eco: 5, waste: 0, carbon: 2, feedback: "Low impact, but maybe not the most realistic. Sustainability works better when it is safe and practical." }
+          { title: "Public transit/carpool", desc: "Gotta stay dry.", energy: -2, eco: 5, waste: 0, carbon: 2, feedback: "Good choice! Bad weather doesn't  always require driving alone." },
+          { title: "Drive alone", desc: "You're in a rush.", energy: 5, eco: -6, waste: 0, carbon: -3, feedback: "Understandable, but solo driving is usually a higher-emissions choice." },
+          { title: "Walk anyway", desc: "Who's scared of a little rain?", energy: -8, eco: 5, waste: 0, carbon: 2, feedback: "Applause to you, but maybe not the most sustainable option." }
         ]
       },
       {
         label: "Random Event",
         scenario: "A product says “ALL NATURAL ECO-FRIENDLY GREEN.” What do you do?",
         choices: [
-          { title: "Research the company first", desc: "Suspicious leaves detected.", energy: -3, eco: 6, waste: 1, carbon: 0, feedback: "Smart. Greenwashing works best when nobody checks the details." },
-          { title: "Buy it immediately", desc: "The packaging has leaves on it, so obviously it’s fine.", energy: 3, eco: -7, waste: -1, carbon: -1, feedback: "Green packaging is not proof. Research matters before replacing something you already own." }
+          { title: "Research the company first", desc: "You and your suspicions.", energy: -3, eco: 6, waste: 1, carbon: 0, feedback: "Good job! Greenwashing works best when nobody checks the details." },
+          { title: "Buy it immediately", desc: "The packaging has leaves on it, so it’s fine.", energy: 3, eco: -7, waste: -1, carbon: -1, feedback: "Green packaging isn't proof of sustainability. Try doing your research before replacing something you already own." }
         ]
       },
       {
         label: "Random Event",
         scenario: "Your friend forgets to recycle at lunch. What do you do?",
         choices: [
-          { title: "Politely remind them", desc: "Advocacy without the lecture hall energy.", energy: -2, eco: 5, waste: 1, carbon: 0, feedback: "Good advocacy. Gentle reminders are more likely to work than guilt." },
-          { title: "Say nothing", desc: "Avoid conflict, avoid impact.", energy: 2, eco: -2, waste: -1, carbon: 0, feedback: "Sometimes silence is easier, but small reminders can help normalize better habits." },
-          { title: "Give a 45-minute speech", desc: "Friendship ending risk ↑", energy: -10, eco: -1, waste: 0, carbon: 0, feedback: "Passionate, yes. Effective? Maybe not. Advocacy usually works better when people do not feel attacked." }
+          { title: "Politely remind them", desc: "You're a real advocate.", energy: -2, eco: 5, waste: 1, carbon: 0, feedback: "Good job! Gentle reminders are more likely to work than guilt." },
+          { title: "Say nothing", desc: "It doesn't really matter, right?", energy: 2, eco: -2, waste: -1, carbon: 0, feedback: "Sometimes silence is easier, but small reminders can help normalize better habits." },
+          { title: "Give a 45-minute speech", desc: "Friendship ending risk ↑", energy: -10, eco: -1, waste: 0, carbon: 0, feedback: "I appreciate your enthusiasm, but advocacy usually works better when people don't feel attacked." }
         ]
       }
     ];
@@ -649,23 +649,42 @@
     }
 
     function buildWeek() {
+      const shuffledWeekdayMorning = shuffle(weekdayMorning);
+      const shuffledWeekdayEvening = shuffle(weekdayEvening);
+
       const days = [
-        { name: "Monday Morning", set: weekdayMorning },
-        { name: "Monday Evening", set: weekdayEvening },
-        { name: "Tuesday Morning", set: weekdayMorning },
-        { name: "Tuesday Evening", set: weekdayEvening },
-        { name: "Wednesday Morning", set: weekdayMorning },
-        { name: "Wednesday Evening", set: weekdayEvening },
-        { name: "Thursday Morning", set: weekdayMorning },
-        { name: "Thursday Evening", set: weekdayEvening },
-        { name: "Friday Morning", set: weekdayMorning },
-        { name: "Friday Evening", set: weekdayEvening }
-      ].map(day => ({ ...chooseRandom(day.set), label: day.name }));
+        { name: "Monday Morning", event: shuffledWeekdayMorning[0] },
+        { name: "Monday Evening", event: shuffledWeekdayEvening[0] },
+        { name: "Tuesday Morning", event: shuffledWeekdayMorning[1] },
+        { name: "Tuesday Evening", event: shuffledWeekdayEvening[1] },
+        { name: "Wednesday Morning", event: shuffledWeekdayMorning[2] },
+        { name: "Wednesday Evening", event: shuffledWeekdayEvening[2] },
+        { name: "Thursday Morning", event: shuffledWeekdayMorning[3] },
+        { name: "Thursday Evening", event: shuffledWeekdayEvening[3] },
+        { name: "Friday Morning", event: shuffle(weekdayMorning)[0] },
+        { name: "Friday Evening", event: shuffle(weekdayEvening)[0] }
+      ].map(day => ({ ...day.event, label: day.name }));
 
-      const weekendMornings = shuffle(weekendMorning).slice(0, 2).map((event, index) => ({ ...event, label: index === 0 ? "Saturday Morning" : "Sunday Morning" }));
-      const weekendEvenings = shuffle(weekendEvening).slice(0, 2).map((event, index) => ({ ...event, label: index === 0 ? "Saturday Evening" : "Sunday Evening" }));
+      const weekendMornings = shuffle(weekendMorning)
+        .slice(0, 2)
+        .map((event, index) => ({
+          ...event,
+          label: index === 0 ? "Saturday Morning" : "Sunday Morning"
+        }));
 
-      days.push(weekendMornings[0], weekendEvenings[0], weekendMornings[1], weekendEvenings[1]);
+      const weekendEvenings = shuffle(weekendEvening)
+        .slice(0, 2)
+        .map((event, index) => ({
+          ...event,
+          label: index === 0 ? "Saturday Evening" : "Sunday Evening"
+        }));
+
+      days.push(
+        weekendMornings[0],
+        weekendEvenings[0],
+        weekendMornings[1],
+        weekendEvenings[1]
+      );
 
       if (Math.random() < 0.75) {
         const event = { ...chooseRandom(randomEvents) };
@@ -779,7 +798,7 @@
         advice += "Your carbon score shows that transportation, energy use, shopping, and food choices are strong places to improve. ";
       }
       if (advice === "") {
-        advice = "Your results show that small repeatable choices can add up. Choose one habit from the guide below and try it for a week.";
+        advice = "Your results show that small habits add up. Choose one habit from the guide below and try it for a week!";
       }
 
       document.getElementById("personalAdvice").textContent = advice;
